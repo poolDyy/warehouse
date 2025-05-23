@@ -1,0 +1,401 @@
+{
+  "groups": [
+    {
+      "id": 1,
+      "name": "Time",
+      "language_code": "en"
+    },
+    {
+      "id": 2,
+      "name": "Electricity",
+      "language_code": "en"
+    },
+    {
+      "id": 3,
+      "name": "Quantity",
+      "language_code": "en"
+    },
+    {
+      "id": 4,
+      "name": "Weight",
+      "language_code": "en"
+    },
+    {
+      "id": 5,
+      "name": "Volume",
+      "language_code": "en"
+    },
+    {
+      "id": 6,
+      "name": "Length",
+      "language_code": "en"
+    },
+    {
+      "id": 7,
+      "name": "Area",
+      "language_code": "en"
+    }
+  ],
+  "units": [
+    {
+      "id": 1,
+      "group_id": 1,
+      "title": "Seconds",
+      "short_title": "sec",
+      "coefficient": 1,
+      "language_code": "en"
+    },
+    {
+      "id": 2,
+      "group_id": 1,
+      "title": "Minutes",
+      "short_title": "min",
+      "coefficient": 60,
+      "language_code": "en"
+    },
+    {
+      "id": 3,
+      "group_id": 1,
+      "title": "Hours",
+      "short_title": "hr",
+      "coefficient": 3600,
+      "language_code": "en"
+    },
+    {
+      "id": 4,
+      "group_id": 1,
+      "title": "Days",
+      "short_title": "day",
+      "coefficient": 86400,
+      "language_code": "en"
+    },
+    {
+      "id": 5,
+      "group_id": 1,
+      "title": "Weeks",
+      "short_title": "wk",
+      "coefficient": 604800,
+      "language_code": "en"
+    },
+    {
+      "id": 6,
+      "group_id": 1,
+      "title": "Months",
+      "short_title": "mo",
+      "coefficient": 2592000,
+      "language_code": "en"
+    },
+    {
+      "id": 7,
+      "group_id": 2,
+      "title": "Kilowatt-hours",
+      "short_title": "kWh",
+      "coefficient": 1,
+      "language_code": "en"
+    },
+    {
+      "id": 8,
+      "group_id": 2,
+      "title": "Megawatt-hours",
+      "short_title": "MWh",
+      "coefficient": 1000,
+      "language_code": "en"
+    },
+    {
+      "id": 9,
+      "group_id": 2,
+      "title": "Kilocalories",
+      "short_title": "kcal",
+      "coefficient": 0.001163,
+      "language_code": "en"
+    },
+    {
+      "id": 10,
+      "group_id": 2,
+      "title": "Kilojoules",
+      "short_title": "kJ",
+      "coefficient": 0.00027778,
+      "language_code": "en"
+    },
+    {
+      "id": 11,
+      "group_id": 3,
+      "title": "Pieces",
+      "short_title": "pcs",
+      "coefficient": 1,
+      "language_code": "en"
+    },
+    {
+      "id": 12,
+      "group_id": 3,
+      "title": "Package",
+      "short_title": "pack",
+      "coefficient": 1,
+      "language_code": "en"
+    },
+    {
+      "id": 13,
+      "group_id": 3,
+      "title": "Set",
+      "short_title": "set",
+      "coefficient": 1,
+      "language_code": "en"
+    },
+    {
+      "id": 14,
+      "group_id": 4,
+      "title": "Kilograms",
+      "short_title": "kg",
+      "coefficient": 1000,
+      "language_code": "en"
+    },
+    {
+      "id": 15,
+      "group_id": 4,
+      "title": "Grams",
+      "short_title": "g",
+      "coefficient": 1,
+      "language_code": "en"
+    },
+    {
+      "id": 16,
+      "group_id": 4,
+      "title": "Milligrams",
+      "short_title": "mg",
+      "coefficient": 0.001,
+      "language_code": "en"
+    },
+    {
+      "id": 17,
+      "group_id": 4,
+      "title": "Centners",
+      "short_title": "cwt",
+      "coefficient": 100000,
+      "language_code": "en"
+    },
+    {
+      "id": 18,
+      "group_id": 4,
+      "title": "Tons",
+      "short_title": "t",
+      "coefficient": 1000000,
+      "language_code": "en"
+    },
+    {
+      "id": 19,
+      "group_id": 4,
+      "title": "Pounds",
+      "short_title": "lbs",
+      "coefficient": 453.59237,
+      "language_code": "en"
+    },
+    {
+      "id": 20,
+      "group_id": 4,
+      "title": "Ounces",
+      "short_title": "oz",
+      "coefficient": 28.34952,
+      "language_code": "en"
+    },
+    {
+      "id": 21,
+      "group_id": 4,
+      "title": "Carats",
+      "short_title": "ct",
+      "coefficient": 0.2,
+      "language_code": "en"
+    },
+    {
+      "id": 22,
+      "group_id": 5,
+      "title": "Liters",
+      "short_title": "L",
+      "coefficient": 1,
+      "language_code": "en"
+    },
+    {
+      "id": 23,
+      "group_id": 5,
+      "title": "Milliliters",
+      "short_title": "mL",
+      "coefficient": 0.001,
+      "language_code": "en"
+    },
+    {
+      "id": 24,
+      "group_id": 5,
+      "title": "Decaliters",
+      "short_title": "daL",
+      "coefficient": 10,
+      "language_code": "en"
+    },
+    {
+      "id": 25,
+      "group_id": 5,
+      "title": "Microliters",
+      "short_title": "µL",
+      "coefficient": 0.000001,
+      "language_code": "en"
+    },
+    {
+      "id": 26,
+      "group_id": 5,
+      "title": "Cubic meters",
+      "short_title": "cu m",
+      "coefficient": 1000,
+      "language_code": "en"
+    },
+    {
+      "id": 27,
+      "group_id": 5,
+      "title": "Cubic centimeters",
+      "short_title": "cu cm",
+      "coefficient": 0.001,
+      "language_code": "en"
+    },
+    {
+      "id": 28,
+      "group_id": 5,
+      "title": "Cubic decimeters",
+      "short_title": "cu dm",
+      "coefficient": 1,
+      "language_code": "en"
+    },
+    {
+      "id": 29,
+      "group_id": 5,
+      "title": "Fluid ounces",
+      "short_title": "fl oz",
+      "coefficient": 0.029573531,
+      "language_code": "en"
+    },
+    {
+      "id": 30,
+      "group_id": 5,
+      "title": "Gallons",
+      "short_title": "gal",
+      "coefficient": 3.785411,
+      "language_code": "en"
+    },
+    {
+      "id": 31,
+      "group_id": 5,
+      "title": "Cubic feet",
+      "short_title": "cu ft",
+      "coefficient": 28.3168,
+      "language_code": "en"
+    },
+    {
+      "id": 32,
+      "group_id": 5,
+      "title": "Cubic yards",
+      "short_title": "cu yd",
+      "coefficient": 764.554858,
+      "language_code": "en"
+    },
+    {
+      "id": 33,
+      "group_id": 6,
+      "title": "Meters",
+      "short_title": "m",
+      "coefficient": 1,
+      "language_code": "en"
+    },
+    {
+      "id": 34,
+      "group_id": 6,
+      "title": "Centimeters",
+      "short_title": "cm",
+      "coefficient": 0.01,
+      "language_code": "en"
+    },
+    {
+      "id": 35,
+      "group_id": 6,
+      "title": "Millimeters",
+      "short_title": "mm",
+      "coefficient": 0.001,
+      "language_code": "en"
+    },
+    {
+      "id": 36,
+      "group_id": 6,
+      "title": "Kilometers",
+      "short_title": "km",
+      "coefficient": 1000,
+      "language_code": "en"
+    },
+    {
+      "id": 37,
+      "group_id": 6,
+      "title": "Decimeters",
+      "short_title": "dm",
+      "coefficient": 0.1,
+      "language_code": "en"
+    },
+    {
+      "id": 38,
+      "group_id": 6,
+      "title": "Linear meters",
+      "short_title": "lin m",
+      "coefficient": 1,
+      "language_code": "en"
+    },
+    {
+      "id": 39,
+      "group_id": 6,
+      "title": "Miles",
+      "short_title": "mi",
+      "coefficient": 1609.344,
+      "language_code": "en"
+    },
+    {
+      "id": 40,
+      "group_id": 6,
+      "title": "Feet",
+      "short_title": "ft",
+      "coefficient": 0.3048,
+      "language_code": "en"
+    },
+    {
+      "id": 41,
+      "group_id": 6,
+      "title": "Inches",
+      "short_title": "in",
+      "coefficient": 0.0254,
+      "language_code": "en"
+    },
+    {
+      "id": 42,
+      "group_id": 7,
+      "title": "Square meters",
+      "short_title": "sq m",
+      "coefficient": 1,
+      "language_code": "en"
+    },
+    {
+      "id": 43,
+      "group_id": 7,
+      "title": "Square centimeters",
+      "short_title": "sq cm",
+      "coefficient": 0.0001,
+      "language_code": "en"
+    },
+    {
+      "id": 44,
+      "group_id": 7,
+      "title": "Square decimeters",
+      "short_title": "sq dm",
+      "coefficient": 0.01,
+      "language_code": "en"
+    },
+    {
+      "id": 45,
+      "group_id": 7,
+      "title": "Square feet",
+      "short_title": "sq ft",
+      "coefficient": 0.09290304,
+      "language_code": "en"
+    }
+  ]
+}

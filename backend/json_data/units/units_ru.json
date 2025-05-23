@@ -1,0 +1,401 @@
+{
+  "groups": [
+    {
+      "id": 1,
+      "name": "Время",
+      "language_code": "ru"
+    },
+    {
+      "id": 2,
+      "name": "Электроэнергия",
+      "language_code": "ru"
+    },
+    {
+      "id": 3,
+      "name": "Количество",
+      "language_code": "ru"
+    },
+    {
+      "id": 4,
+      "name": "Вес",
+      "language_code": "ru"
+    },
+    {
+      "id": 5,
+      "name": "Объем",
+      "language_code": "ru"
+    },
+    {
+      "id": 6,
+      "name": "Длина",
+      "language_code": "ru"
+    },
+    {
+      "id": 7,
+      "name": "Площадь",
+      "language_code": "ru"
+    }
+  ],
+  "units": [
+    {
+      "id": 1,
+      "group_id": 1,
+      "title": "Секунды",
+      "short_title": "сек",
+      "coefficient": 1,
+      "language_code": "ru"
+    },
+    {
+      "id": 2,
+      "group_id": 1,
+      "title": "Минуты",
+      "short_title": "мин",
+      "coefficient": 60,
+      "language_code": "ru"
+    },
+    {
+      "id": 3,
+      "group_id": 1,
+      "title": "Часы",
+      "short_title": "ч",
+      "coefficient": 3600,
+      "language_code": "ru"
+    },
+    {
+      "id": 4,
+      "group_id": 1,
+      "title": "Сутки",
+      "short_title": "сут",
+      "coefficient": 86400,
+      "language_code": "ru"
+    },
+    {
+      "id": 5,
+      "group_id": 1,
+      "title": "Недели",
+      "short_title": "нед",
+      "coefficient": 604800,
+      "language_code": "ru"
+    },
+    {
+      "id": 6,
+      "group_id": 1,
+      "title": "Месяцы",
+      "short_title": "мес",
+      "coefficient": 2592000,
+      "language_code": "ru"
+    },
+    {
+      "id": 7,
+      "group_id": 2,
+      "title": "Киловатт-часы",
+      "short_title": "кВт-ч",
+      "coefficient": 1,
+      "language_code": "ru"
+    },
+    {
+      "id": 8,
+      "group_id": 2,
+      "title": "Мегаватт-часы",
+      "short_title": "мВт-ч",
+      "coefficient": 1000,
+      "language_code": "ru"
+    },
+    {
+      "id": 9,
+      "group_id": 2,
+      "title": "Килокалории",
+      "short_title": "ккал",
+      "coefficient": 0.001163,
+      "language_code": "ru"
+    },
+    {
+      "id": 10,
+      "group_id": 2,
+      "title": "Килоджоули",
+      "short_title": "кДж",
+      "coefficient": 0.00027778,
+      "language_code": "ru"
+    },
+    {
+      "id": 11,
+      "group_id": 3,
+      "title": "Штуки",
+      "short_title": "шт",
+      "coefficient": 1,
+      "language_code": "ru"
+    },
+    {
+      "id": 12,
+      "group_id": 3,
+      "title": "Упаковка",
+      "short_title": "упак",
+      "coefficient": 1,
+      "language_code": "ru"
+    },
+    {
+      "id": 13,
+      "group_id": 3,
+      "title": "Комплект",
+      "short_title": "компл",
+      "coefficient": 1,
+      "language_code": "ru"
+    },
+    {
+      "id": 14,
+      "group_id": 4,
+      "title": "Килограммы",
+      "short_title": "кг",
+      "coefficient": 1000,
+      "language_code": "ru"
+    },
+    {
+      "id": 15,
+      "group_id": 4,
+      "title": "Граммы",
+      "short_title": "г",
+      "coefficient": 1,
+      "language_code": "ru"
+    },
+    {
+      "id": 16,
+      "group_id": 4,
+      "title": "Миллиграммы",
+      "short_title": "мг",
+      "coefficient": 0.001,
+      "language_code": "ru"
+    },
+    {
+      "id": 17,
+      "group_id": 4,
+      "title": "Цeнтнepы",
+      "short_title": "ц",
+      "coefficient": 100000,
+      "language_code": "ru"
+    },
+    {
+      "id": 18,
+      "group_id": 4,
+      "title": "Тонны",
+      "short_title": "т",
+      "coefficient": 1000000,
+      "language_code": "ru"
+    },
+    {
+      "id": 19,
+      "group_id": 4,
+      "title": "Фунты",
+      "short_title": "lbs",
+      "coefficient": 453.59237,
+      "language_code": "ru"
+    },
+    {
+      "id": 20,
+      "group_id": 4,
+      "title": "Унции",
+      "short_title": "oz",
+      "coefficient": 28.34952,
+      "language_code": "ru"
+    },
+    {
+      "id": 21,
+      "group_id": 4,
+      "title": "Караты",
+      "short_title": "кар",
+      "coefficient": 0.2,
+      "language_code": "ru"
+    },
+    {
+      "id": 22,
+      "group_id": 5,
+      "title": "Литры",
+      "short_title": "л",
+      "coefficient": 1,
+      "language_code": "ru"
+    },
+    {
+      "id": 23,
+      "group_id": 5,
+      "title": "Миллилитры",
+      "short_title": "мл",
+      "coefficient": 0.001,
+      "language_code": "ru"
+    },
+    {
+      "id": 24,
+      "group_id": 5,
+      "title": "Декалитры",
+      "short_title": "дал",
+      "coefficient": 10,
+      "language_code": "ru"
+    },
+    {
+      "id": 25,
+      "group_id": 5,
+      "title": "Микролитры",
+      "short_title": "мкл",
+      "coefficient": 0.000001,
+      "language_code": "ru"
+    },
+    {
+      "id": 26,
+      "group_id": 5,
+      "title": "Куб. метры",
+      "short_title": "куб. м",
+      "coefficient": 1000,
+      "language_code": "ru"
+    },
+    {
+      "id": 27,
+      "group_id": 5,
+      "title": "Куб. сантиметры",
+      "short_title": "куб. см",
+      "coefficient": 0.001,
+      "language_code": "ru"
+    },
+    {
+      "id": 28,
+      "group_id": 5,
+      "title": "Куб. дециметры",
+      "short_title": "куб. дм",
+      "coefficient": 1,
+      "language_code": "ru"
+    },
+    {
+      "id": 29,
+      "group_id": 5,
+      "title": "Жидкие унции",
+      "short_title": "fl oz",
+      "coefficient": 0.029573531,
+      "language_code": "ru"
+    },
+    {
+      "id": 30,
+      "group_id": 5,
+      "title": "Галлоны",
+      "short_title": "gal",
+      "coefficient": 3.785411,
+      "language_code": "ru"
+    },
+    {
+      "id": 31,
+      "group_id": 5,
+      "title": "Куб. футы",
+      "short_title": "cu ft",
+      "coefficient": 28.3168,
+      "language_code": "ru"
+    },
+    {
+      "id": 32,
+      "group_id": 5,
+      "title": "Куб. ярды",
+      "short_title": "cu yd",
+      "coefficient": 764.554858,
+      "language_code": "ru"
+    },
+    {
+      "id": 33,
+      "group_id": 6,
+      "title": "Метры",
+      "short_title": "м",
+      "coefficient": 1,
+      "language_code": "ru"
+    },
+    {
+      "id": 34,
+      "group_id": 6,
+      "title": "Сантиметры",
+      "short_title": "см",
+      "coefficient": 0.01,
+      "language_code": "ru"
+    },
+    {
+      "id": 35,
+      "group_id": 6,
+      "title": "Миллиметры",
+      "short_title": "мм",
+      "coefficient": 0.001,
+      "language_code": "ru"
+    },
+    {
+      "id": 36,
+      "group_id": 6,
+      "title": "Километры",
+      "short_title": "км",
+      "coefficient": 1000,
+      "language_code": "ru"
+    },
+    {
+      "id": 37,
+      "group_id": 6,
+      "title": "Дециметры",
+      "short_title": "дм",
+      "coefficient": 0.1,
+      "language_code": "ru"
+    },
+    {
+      "id": 38,
+      "group_id": 6,
+      "title": "Погонные метры",
+      "short_title": "пог. м",
+      "coefficient": 1,
+      "language_code": "ru"
+    },
+    {
+      "id": 39,
+      "group_id": 6,
+      "title": "Мили",
+      "short_title": "mi",
+      "coefficient": 1609.344,
+      "language_code": "ru"
+    },
+    {
+      "id": 40,
+      "group_id": 6,
+      "title": "Футы",
+      "short_title": "ft",
+      "coefficient": 0.3048,
+      "language_code": "ru"
+    },
+    {
+      "id": 41,
+      "group_id": 6,
+      "title": "Дюймы",
+      "short_title": "in",
+      "coefficient": 0.0254,
+      "language_code": "ru"
+    },
+    {
+      "id": 42,
+      "group_id": 7,
+      "title": "Кв. метры",
+      "short_title": "кв. м",
+      "coefficient": 1,
+      "language_code": "ru"
+    },
+    {
+      "id": 43,
+      "group_id": 7,
+      "title": "Кв. сантиметры",
+      "short_title": "кв. см",
+      "coefficient": 0.0001,
+      "language_code": "ru"
+    },
+    {
+      "id": 44,
+      "group_id": 7,
+      "title": "Кв. дециметры",
+      "short_title": "кв. дм",
+      "coefficient": 0.01,
+      "language_code": "ru"
+    },
+    {
+      "id": 45,
+      "group_id": 7,
+      "title": "Кв. футы",
+      "short_title": "sq ft",
+      "coefficient": 0.09290304,
+      "language_code": "ru"
+    }
+  ]
+}

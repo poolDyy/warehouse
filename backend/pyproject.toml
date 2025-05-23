@@ -1,0 +1,72 @@
+[tool.poetry]
+name = "StorageControl"
+version = "0.1.0"
+description = ""
+authors = ["poldy <n_i_x_i@tuta.io>"]
+
+[tool.poetry.dependencies]
+python = ">=3.13, <3.14"
+django = "5.1.6"
+djangorestframework = "3.15.2"
+ruff = ">=0.9.6,<0.10.0"
+django-environ = ">=0.12.0,<0.13.0"
+psycopg2-binary = ">=2.9.10,<3.0.0"
+django-filter = ">=25.1,<26.0"
+djangorestframework-simplejwt = ">=5.4.0,<6.0.0"
+whitenoise = ">=6.9.0,<7.0.0"
+django-redis = ">=5.4.0,<6.0.0"
+drf-spectacular = {extras = ["sidecar"], version = ">=0.28.0,<0.29.0"}
+django-cleanup = "^9.0.0"
+django-extensions = "^4.1"
+
+[tool.poetry.group.test.dependencies]
+pytest-django = "^4.10.0"
+mixer = "^7.2.2"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+# -------PYTEST-------
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "src.settings"
+python_files = ["test_*.py", "*_test.py"]
+
+# --------RUFF--------
+[tool.ruff]
+line-length = 120
+lint.select = [
+    "ANN", "E4", "E7", "E9", "F", "I", "T20",
+    "D200", "D201", "D204", "D206", "D207", "D208", "D209",
+    "D301", "D403", "D400", "D401", "D402", "D404", "D415",
+]
+lint.ignore = [
+    "D1", "D203", "D213", "D205", "ANN401", "RUF001", "ARG002", "ARG001", "RUF012", "SLF001",
+]
+
+exclude = [
+    ".bzr", ".direnv", ".eggs", ".git", ".hg", ".mypy_cache", ".nox", ".pants.d", ".ruff_cache", ".svn", ".tox",
+    "__pypackages__", "_build", "buck-out", "build", "dist", "frontend/node_modules", "venv", ".env", "__init__.py",
+]
+
+lint.dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+target-version = "py313"
+
+[tool.ruff.lint.isort]
+known-first-party = ["api", "apps", "src", "tests"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["E402"]
+
+[tool.ruff.lint.extend-per-file-ignores]
+"tests/*.py" = ["S101", "S106", "D", "ANN"]
+"**/migrations/*.py" = ["S101", "S106", "D", "ANN"]

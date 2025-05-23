@@ -1,0 +1,90 @@
+volumes:
+  pgdata:
+  redis_data:
+
+
+networks:
+  sc-network:
+    driver: bridge
+
+services:
+
+  sc-nginx:
+    image: nginx:1.25
+    container_name: sc-nginx
+    volumes:
+      - ./cicd/nginx:/etc/nginx/
+      - ./frontend/public:/usr/share/nginx/html/static
+    ports:
+      - 9000:80
+    depends_on:
+      - sc-backend
+      - sc-frontend
+    networks:
+      - sc-network
+
+  sc-postgres:
+    image: postgres:17.3-alpine
+    container_name: sc-postgres
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - sc-network
+
+  sc-redis:
+    image: redis:7.2-alpine
+    container_name: sc-redis
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
+    volumes:
+      - 'redis_data:/bitnami/redis/data'
+    networks:
+      - sc-network
+
+  sc-backend:
+    container_name: sc-backend
+    build:
+      context: ./backend
+      dockerfile: ../cicd/docker/backend/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file:
+      - backend/.env
+    volumes:
+      - ./backend:/srv/
+    networks:
+      - sc-network
+    depends_on:
+      - sc-postgres
+      - sc-redis
+    command: /bin/sh -c "./manage.py migrate && ./manage.py runserver 0.0.0.0:8000"
+    # command:  /bin/sh -c "./manage.py migrate &&  uwsgi --master --http :8000 --module src.wsgi"
+
+  sc-frontend:
+    container_name: sc-frontend
+    build:
+      context: ./frontend
+      dockerfile: ../cicd/docker/frontend/Dockerfile.dev
+      #dockerfile: ../cicd/docker/frontend/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+    environment:
+      #- NODE_ENV=production
+      #- NEXT_PUBLIC_API_BASE_URL=домен
+      - NEXT_PUBLIC_API_BASE_URL=http://127.0.0.1:9000
+      - API_BACKEND_URL=http://sc-backend:8000
+      - NODE_ENV=development
+
+    networks:
+      - sc-network
+    depends_on:
+      - sc-backend
