@@ -13,8 +13,9 @@ class TestCategoryCRUD:
         """Тест получения списка категорий."""
 
         response = auth_api_test_client.get(self.BASE_URL)
-        assert len(response) == 3
-        assert all(cat['user'] == auth_user.id for cat in response)
+        data = response['results']
+        assert len(data) == 3
+        assert all(cat['user'] == auth_user.id for cat in data)
 
     def test_get_category_detail(self, auth_api_test_client, category_product):
         """Тест получения одной категории."""

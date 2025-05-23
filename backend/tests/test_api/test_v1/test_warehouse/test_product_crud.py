@@ -21,8 +21,10 @@ class TestProductCRUD:
         url = self.BASE_URL.format(warehouse_id=warehouse.id)
         response = auth_api_test_client.get(url)
 
-        assert len(response) == 1
-        assert response[0]['id'] == product.id
+        data = response['results']
+
+        assert len(data) == 1
+        assert data[0]['id'] == product.id
 
     def test_get_product_detail(self, auth_api_test_client, warehouse, product):
         """Успешное получение деталей продукта."""

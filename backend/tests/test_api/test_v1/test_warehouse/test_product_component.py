@@ -16,8 +16,10 @@ class TestProductComponentCRUD:
         url = self.BASE_URL.format(product_id=product.id)
         response = auth_api_test_client.get(url)
 
-        assert len(response) == 1
-        assert response[0]['id'] == component.id
+        data = response['results']
+
+        assert len(data) == 1
+        assert data[0]['id'] == component.id
 
     def test_get_component_detail(self, auth_api_test_client, product, component):
         """Успешное получение деталей компонента."""

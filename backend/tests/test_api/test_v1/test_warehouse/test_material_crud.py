@@ -13,9 +13,11 @@ class TestMaterialCRUD:
         url = self.BASE_URL.format(warehouse_id=warehouse_material.id)
         response = auth_api_test_client.get(url)
 
-        assert len(response) == 1
-        assert response[0]['id'] == material.id
-        assert response[0]['title'] == material.title
+        data = response['results']
+
+        assert len(data) == 1
+        assert data[0]['id'] == material.id
+        assert data[0]['title'] == material.title
 
     def test_get_material_detail(self, auth_api_test_client, warehouse_material, material):
         """Тест получения одного материала."""

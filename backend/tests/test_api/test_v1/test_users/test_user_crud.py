@@ -11,8 +11,9 @@ class TestUserCRUD:
     def test_get_user_list(self, api_test_client, user):
         """Тест получения списка пользователей."""
         response = api_test_client.get(self.BASE_URL)
-        assert isinstance(response, list)
-        assert any(u['id'] == user.id for u in response)
+        data = response['results']
+        assert isinstance(data, list)
+        assert any(u['id'] == user.id for u in data)
 
     def test_get_user_detail(self, api_test_client, user):
         """Тест получения одного пользователя."""

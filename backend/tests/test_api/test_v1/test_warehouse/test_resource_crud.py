@@ -14,9 +14,11 @@ class TestResourceCRUD:
         """Тест получения списка ресурсов."""
         response = auth_api_test_client.get(self.BASE_URL)
 
-        assert len(response) == 1
-        assert response[0]['id'] == resource.id
-        assert response[0]['title'] == resource.title
+        data = response['results']
+
+        assert len(data) == 1
+        assert data[0]['id'] == resource.id
+        assert data[0]['title'] == resource.title
 
     def test_get_resource_detail(self, auth_api_test_client, resource):
         """Тест получения одного ресурса."""

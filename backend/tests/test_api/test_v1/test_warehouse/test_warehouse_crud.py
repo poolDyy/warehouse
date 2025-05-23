@@ -12,10 +12,13 @@ class TestWarehouseCRUD:
     def test_get_warehouse_list(self, auth_api_test_client, warehouse):
         """Тест получения списка складов."""
         response = auth_api_test_client.get(self.BASE_URL)
-        assert isinstance(response, list)
-        assert any(w['id'] == warehouse.id for w in response)
-        assert response[0]['title'] == warehouse.title
-        assert response[0]['storage_type']['value'] == warehouse.storage_type
+
+        data = response['results']
+
+        assert isinstance(data, list)
+        assert any(w['id'] == warehouse.id for w in data)
+        assert data[0]['title'] == warehouse.title
+        assert data[0]['storage_type']['value'] == warehouse.storage_type
 
     def test_get_warehouse_detail(self, auth_api_test_client, warehouse, category_product):
         """Тест получения деталей склада."""
