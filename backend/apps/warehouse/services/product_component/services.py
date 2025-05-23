@@ -10,11 +10,6 @@ from apps.unit.models import Unit
 from apps.warehouse.choices import ProductComponentChoices
 from apps.warehouse.models import Material, Product, ProductComponent, Resource
 
-CONTENT_TYPE_MAP: dict[str, ContentType] = {
-    ProductComponentChoices.MATERIAL: ContentType.objects.get_for_model(Material),
-    ProductComponentChoices.RESOURCE: ContentType.objects.get_for_model(Resource),
-}
-
 
 @dataclasses.dataclass
 class ProductComponentBaseService:
@@ -27,10 +22,17 @@ class ProductComponentBaseService:
     user_id: int
     id: int | None = None
 
+    @cached_property
+    def content_type_map(self) -> dict[str, ContentType]:
+        return {
+            ProductComponentChoices.MATERIAL: ContentType.objects.get_for_model(Material),
+            ProductComponentChoices.RESOURCE: ContentType.objects.get_for_model(Resource),
+        }
+
     @property
     def content_type_instance(self) -> ContentType:
         if isinstance(self.content_type, str):
-            return CONTENT_TYPE_MAP[self.content_type]
+            return self.content_type_map[self.content_type]
         if isinstance(self.content_type, ContentType):
             return self.content_type
         raise ValueError(f'Невалидный content_type {self.content_type}')

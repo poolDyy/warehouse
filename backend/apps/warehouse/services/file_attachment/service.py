@@ -12,12 +12,14 @@ class FileAttachmentCreateService:
     filename: str
     file: bytes
 
-    content_type_map = {
-        ContentTypeChoices.PRODUCT: ContentType.objects.get_for_model(Product),
-        ContentTypeChoices.MATERIAL: ContentType.objects.get_for_model(Material),
-        ContentTypeChoices.RESOURCE: ContentType.objects.get_for_model(Resource),
-        ContentTypeChoices.WAREHOUSE: ContentType.objects.get_for_model(Warehouse),
-    }
+    @property
+    def content_type_map(self) -> dict:
+        return {
+            ContentTypeChoices.PRODUCT: ContentType.objects.get_for_model(Product),
+            ContentTypeChoices.MATERIAL: ContentType.objects.get_for_model(Material),
+            ContentTypeChoices.RESOURCE: ContentType.objects.get_for_model(Resource),
+            ContentTypeChoices.WAREHOUSE: ContentType.objects.get_for_model(Warehouse),
+        }
 
     def create(
         self,

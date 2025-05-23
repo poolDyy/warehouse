@@ -1,14 +1,14 @@
 lint:
-	ruff check .
+	docker exec wh-backend ruff check .
 
 test:
-	docker exec -it sc-backend pytest .
+	docker exec -it wh-backend pytest .
 
 b-logs:
-	docker logs -f sc-backend
+	docker logs -f wh-backend
 
 rmi-backend:
-	docker stop sc-backend && docker rm sc-backend && docker rmi storagecontrol-sc-backend
+	docker stop wh-backend && docker rm wh-backend && docker rmi wh-wh-backend
 
 Start:
 	docker compose up -d

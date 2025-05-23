@@ -179,7 +179,7 @@ STORAGES = {
 }
 
 
-REDIS_HOST = env('REDIS_HOST', default='sc-redis')
+REDIS_HOST = env('REDIS_HOST', default='wh-redis')
 REDIS_PORT = env('REDIS_PORT', default='6390')
 REDIS_DB = env('REDIS_DB', default='0')
 
